@@ -1,0 +1,158 @@
+/*CSS*/
+*{
+  margin:0;
+  border:0;
+  padding:0;
+}
+
+html{
+  font-family: sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+body{
+  cursor:crosshair;
+  background-image:url('../img/backgroundhtml.png');
+  background-size:cover;
+}
+
+canvas{
+  margin-left:calc(50% - 550px);
+}
+
+#gui{
+  background-color:white;
+  padding:1rem;
+  border:1px black solid;
+  width:calc(1100px - 2rem);
+  height:4rem;
+  margin:auto;
+  margin-top:1rem;
+  display:grid;
+  grid-template-columns: 10rem 15rem 15rem 10rem;
+  justify-content: center;
+}
+
+#gui div {
+  text-align: center;
+}
+
+#gui div p{
+  font-size:2rem;
+  font-weight:600;
+}
+
+#gui div h1{
+  color:darkgrey;
+}
+
+#healthbar{
+  margin:auto;
+  margin-top:2rem;
+  background:white;
+  border: 1px solid black;
+  padding:0.5rem;
+  width:calc(1100px - 1rem);
+  margin-bottom:1rem;
+  position:relative;
+}
+
+#health{
+  width:100%;
+  transition:width 0.7s;
+  height:2rem;
+  background-color:rgb(247, 90, 90);
+}
+
+#healthcounter{
+  position:absolute;
+  width:100%;
+  height:100%;
+  text-align:center;
+  font-size:1.4rem;
+  padding-top:0.2rem;
+}
+
+#lost div{
+  background-color:white;
+  border:1px solid black;
+  margin:auto;
+  width:30rem;
+  padding:2rem;
+  text-align: center;
+  margin-top:calc(50vh - 15rem);
+}
+
+#lost div h1{
+  margin-bottom:2rem;
+}
+
+#lost{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0, 0, 0, 0.35);
+  z-index:100;
+  display:none;
+}
+
+#retry{
+  background-color:rgb(73, 111, 63);
+  color:white;
+  border:black 1px solid;
+  padding:1rem 1.5rem;
+  font-size:1.2rem;
+  outline:none;
+}
+
+#retry:active{
+  border:3px solid black;
+}
+
+button{
+  cursor:pointer;
+}
+
+#h3rotl{
+  display:none;
+  color:rgb(73, 111, 63);
+  padding:1rem 0;
+  background-color:white;
+  border:1px solid black;
+  text-align: center;
+  width:20rem;
+  position:fixed;
+  top:50vh;
+  left:calc(50vw - 10rem);
+  animation:rotate 4.1s ease;
+}
+
+@keyframes rotate {
+  0%{
+    top:-5vh;
+    opacity:0;
+    transform:scale(0) rotate(0deg);
+  }
+  30%{
+    top:50vh;
+    opacity:1;
+    transform:scale(1) rotate(360deg);
+  }
+  70%{
+    top:50vh;
+    opacity:1;
+    transform:scale(1) rotate(360deg);
+  }
+  100%{
+    top:-5vh;
+    opacity:0;
+    transform:scale(0) rotate(720deg);
+  }
+}
